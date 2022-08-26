@@ -38,7 +38,7 @@ a{
 }
 /* container  */
 .container{
-    min-width: 1000px;
+    width: 1200px;
     background-color: white;
     margin: 0 auto;
     /* padding: 200px; */
@@ -58,8 +58,8 @@ a{
     flex-direction: column;
     justify-content: space-between;
     /* padding: 10px; */
-    flex-basis: calc(100% / 2.2);
-    border-right: 1px solid rgb(236, 229, 221);
+    flex-basis: calc(100% / 2.5);
+    border-right: 1px solid gray;
 }
 
 /* COL */
@@ -68,6 +68,10 @@ a{
     align-items: center;
     
 }
+/* .col_chat{
+    display: flex;
+    padding: 20px;
+} */
 
 /* USER */
 .user_name,
@@ -76,13 +80,14 @@ a{
 }
 .nav_icons{
     display: flex;
-    gap: 10px;
+    gap: 14px;
     color: gray;
     font-size: 20px;
 }
-.col_user{
+.col_user,
+.current_contact{
     background-color: rgb(236, 229, 221);
-    padding: 10px;
+    padding: 5px 20px;
     gap: 15px;
 }
 
@@ -98,7 +103,7 @@ a{
     font-weight: 600;
 }
 .col_notification{
-    /* padding: 8px 0; */
+    padding: 8px 0;
     background-color: rgb(154, 214, 248);
 }
 
@@ -109,7 +114,8 @@ a{
     line-height: 20px;
     background-color: rgb(236, 229, 221);
 }
-.input_search{
+.input_search,
+.input_area_text{
     line-height: 20px;
     border: none;
     padding: 5px;
@@ -147,4 +153,44 @@ a{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 3px;
+}
+
+/* CONTENT */
+#main-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.current_details{
+    align-self: center ;
+}
+.current_contact{
+    padding: 5px 20px;
+}
+
+/* chat */
+.col_chat{
+    flex-grow: 1;
+
+}
+.bg_chat{
+    background-image: url("./assets/mine.jpg");
+    /* background-color: black; */
+    height: 100%;
+    max-height: 100%;
+   
+}
+
+/* AREA TEXT */
+.col_emoji{
+    padding: 10px 20px;
+    background-color: rgb(236, 229, 221);
+    gap: 15px;
+    color: gray;
+    font-size: 25px;
+}
+.input_area_text{
+    line-height: 35px;
+    border-radius: 5px;
+    padding: 0 5px;
 }
