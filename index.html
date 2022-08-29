@@ -4,250 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- link css -->
     <link rel="stylesheet" href="./app.css">
-    <!-- link font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- link font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
-
-    <title>Boolzapp</title>
+    <title>Document</title>
 </head>
 <body>
+    <div id="app">
+        <div class="sidebar">
 
-    <header id="main-header">
-        <div class="container">
-            <div id="main-nav"> 
-                <!-- col USER -->
-                <div class="col col_user">
-                    <div class="figure">
+            <div class="toolbar">
+                <div class="contact-details">
+
+                    <figure class="avatar">
                         <img src="./assets/avatar_io.jpg" alt="">
-                    </div>
-                    <div class="user_name">
-                        Sara
-                    </div>
-                    <div class="nav_icons">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- /col USER -->
-                <!-- COL NOTIFICATION -->
-                <div class="col col_notification">
-                    <div class="icon_notification">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div class="notification-container">
-                        <div class="notification_message">
-                            Ricevi notifiche di nuovi messaggi
-                        </div>
-                        <div class="active_notification">
-                            <a href="#">Attiva notifiche desktop</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /NOTIFICATION -->
-                <!-- COL SEARCH -->
-                <div class="col col_search">
-                    <div class="icon_search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <input class="input_search" type="text" placeholder="Cerca....">
-                    
-                </div>
-                <!-- /SEARCH -->
-                <!-- CONTACTS -->
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_1.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Michele
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
-                </div>
+                    </figure>
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_2.jpg" alt="">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Sofia</h3>
+                        
                     </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Fabio
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
-                </div>
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_3.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Samuele
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
                 </div>
+               
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_4.jpg" alt="">
+            <div class="notification_alert">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div class="notification-container">
+                    <div class="notification_message">
+                        Ricevi notifiche di nuovi messaggi
                     </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Alessandro B.
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
+                    <div class="active_notification">
+                        <a href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_5.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Alessandro L.
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
+            <div class="search">
+                <div class="search_icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_6.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Claudia
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
-                </div>
+                <input type="text" placeholder="cerca o inizia una nuova chat">
+            </div>
 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_7.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Federico
+            <ul class="contacts">
+                <li  v-for = "contact in contacts" class="contact active">
+                    <div class="contact-details">
+
+                        <figure class="avatar">
+                            <img src="./assets/avatar_1.jpg" alt="">
+                        </figure>
+    
+                        <div class="contact-info">
+                            <h3 class="contact-name">Michele</h3>
+                            <p class="last-access">Ultimo accesso</p>
                         </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
+    
                     </div>
-                    <div class="contact_hour">
+                    <div class="contact-access-info">
                         12.00
                     </div>
-                </div>
+                </li>
+
+
+            
+
 
                 
-                <div class="col col_contacts">
-                    <div class="figure">
-                        <img src="./assets/avatar_8.jpg" alt="">
-                    </div>
-                    <div class="contact_details">
-                        <div class="contact_name">
-                            Davide
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="contact_hour">
-                        12.00
-                    </div>
-                </div>
-                <!-- /CONTACTS -->
-            </div>
+            </ul>
 
-            <!-- CONTENT -->
-            <div id="main-content">
-                <!-- CURRENT CONTACT -->
-                <div class="col col_contacts current_contact">
-                    <div class="figure">
-                        <img src="./assets/avatar_8.jpg" alt="">
-                    </div>
-                    <div class="contact_details current_details">
-                        <div class="contact_name">
-                            Davide
-                        </div>
-                        <div class="contact_last_message">
-                            Ultimo messaggio inviato
-                        </div>
-                    </div>
-                    <div class="nav_icons">
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                   
-                </div>
-                <!-- / CURRENT CONTACT -->
-                <!-- CHAT -->
-                <div class="col_chat">
-                    <div class="bg_chat">
-
-                    </div>
-                </div>
-                <!-- /CHAT -->
-                <!-- AREA TEXT -->
-                <div class="col col_emoji">
-                    <div class="emoji_chat">
-                        <i class="fa-regular fa-face-smile"></i>
-                    </div>
-                    <input class="input_area_text" type="text" placeholder="scrivi qui il messaggio...">
-                    <div class="rec_chat">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-                </div>
-                <!-- /fine area text -->
-            </div>
         </div>
-        
-       
-    </header>
-    <main id="main">
 
-    </main>
-    
 
+        <!-- CHAT -->
+
+        <div class="chat"> 
+
+            <div class="toolbar">
+                <div class="contact-details">
+
+                    <figure class="avatar">
+                        <img src="./assets/avatar_1.jpg" alt="">
+                    </figure>
+
+                    <div class="contact-info">
+                        <h3 class="contact-name">Michele</h3>
+                        <p class="last-access">Ultimo accesso</p>
+                    </div>
+
+                </div>
+               
+               
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+
+            <div class="messages">
+                <div class="message sent">
+                    ciao
+                </div>
+
+                <div class="message sent">
+                    ok
+                </div>
+                <div class="message received">
+                    ok
+                </div>
+            </div>
+
+            <div class="add-new-message">
+                <div class="emoji_chat">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <input class="input_area_text" type="text" placeholder="scrivi qui il messaggio...">
+                <div class="rec_chat">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
