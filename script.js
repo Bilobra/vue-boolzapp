@@ -171,8 +171,8 @@ const app = new Vue({
     },
 
     methods: {
-        nextIndex (){
-            this.currentIndex++
+        nextIndex (index){
+            this.currentIndex = index
         }
 
     },

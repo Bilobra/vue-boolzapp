@@ -64,7 +64,7 @@
             </div>
 
             <ul class="contacts">
-                <li  @click="nextIndex" v-for = "(contact,index) in contacts" class="contact" :class ="index === currentIndex ? 'active' : '' " >
+                <li  @click="nextIndex(index)" v-for = "(contact,index) in contacts" class="contact" :class ="index === currentIndex ? 'active' : '' " >
                     <div class="contact-details">
 
                         <figure class="avatar">
