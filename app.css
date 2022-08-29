@@ -209,7 +209,7 @@ border-right: 1px solid #c1c1c1;
 /* messaggi */
 
 .messages {
-    padding: 40px 60px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -243,7 +243,7 @@ border-right: 1px solid #c1c1c1;
 /* area text CHAT */
 .add-new-message {
     display: flex;
-    padding: 8px 16px;
+    padding: 8px 30px;
     align-items: center;
     gap: 10px;
     background-color: #F3EEEA;
@@ -252,7 +252,7 @@ border-right: 1px solid #c1c1c1;
 .add-new-message input {
     flex-grow: 1;
     padding-left: 20px;
-    line-height: 30px;
+    line-height: 45px;
     border: none;
     border-radius: 5px;
 }
