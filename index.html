@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
-    <title>Document</title>
+    <title>Boolzapp</title>
 </head>
 <body>
     <div id="app">
@@ -64,15 +64,15 @@
             </div>
 
             <ul class="contacts">
-                <li  v-for = "contact in contacts" class="contact active">
+                <li  @click="nextIndex" v-for = "(contact,index) in contacts" class="contact" :class ="index === currentIndex ? 'active' : '' " >
                     <div class="contact-details">
 
                         <figure class="avatar">
-                            <img src="./assets/avatar_1.jpg" alt="">
+                            <img :src="contact.avatar" :alt="contact.name">
                         </figure>
     
                         <div class="contact-info">
-                            <h3 class="contact-name">Michele</h3>
+                            <h3 class="contact-name">{{contact.name}}</h3>
                             <p class="last-access">Ultimo accesso</p>
                         </div>
     

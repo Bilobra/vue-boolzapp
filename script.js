@@ -1,7 +1,7 @@
 const contacts = [
     {
         name: 'Michele',
-        avatar: '_1',
+        avatar: './assets/avatar_1.jpg',
         visible: true,
         messages: [
             {
@@ -23,7 +23,7 @@ const contacts = [
     },
     {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: './assets/avatar_2.jpg',
         visible: true,
         messages: [
             {
@@ -45,7 +45,7 @@ const contacts = [
     },
     {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: './assets/avatar_3.jpg',
         visible: true,
         messages: [
             {
@@ -67,7 +67,7 @@ const contacts = [
     },
     {
         name: 'Alessandro B.',
-        avatar: '_4',
+        avatar: './assets/avatar_4.jpg',
         visible: true,
         messages: [
             {
@@ -84,7 +84,7 @@ const contacts = [
     },
     {
         name: 'Alessandro L.',
-        avatar: '_5',
+        avatar: './assets/avatar_5.jpg',
         visible: true,
         messages: [
             {
@@ -101,7 +101,7 @@ const contacts = [
     },
     {
         name: 'Claudia',
-        avatar: '_6',
+        avatar: './assets/avatar_6.jpg',
         visible: true,
         messages: [
             {
@@ -123,7 +123,7 @@ const contacts = [
     },
     {
         name: 'Federico',
-        avatar: '_7',
+        avatar: './assets/avatar_7.jpg',
         visible: true,
         messages: [
             {
@@ -140,7 +140,7 @@ const contacts = [
     },
     {
         name: 'Davide',
-        avatar: '_8',
+        avatar: './assets/avatar_8.jpg',
         visible: true,
         messages: [
             {
@@ -167,5 +167,13 @@ const app = new Vue({
 
     data:{
         contacts,
+        currentIndex : 0,
+    },
+
+    methods: {
+        nextIndex (){
+            this.currentIndex++
+        }
+
     },
 })
