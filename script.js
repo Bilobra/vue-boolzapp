@@ -163,17 +163,45 @@ const contacts = [
 ]
 
 const app = new Vue({
-    el:'#app',
+    el: '#app',
 
-    data:{
+    data: {
         contacts,
-        currentIndex : 0,
+        currentIndex: 0,
+        newMessage: '',
     },
 
     methods: {
-        nextIndex (index){
+        nextIndex(index) {
             this.currentIndex = index
-        }
+        },
+
+        addMessage(text, index) {
+
+            newMessage = {
+                message: text,
+                status: 'sent',
+            };
+
+            this.newMessage = this.newMessage.trim();
+
+            this.contacts[index].messages.push(newMessage);
+            this.newMessage = '';
+
+
+            setTimeout(() => {
+                this.autoMessage(index)
+            }, 1000);
+
+        },
+
+        autoMessage(index) {
+            newMessage = {
+                message: 'ok',
+                status: 'received'
+            };
+            this.contacts[index].messages.push(newMessage);
+        },
 
     },
 })

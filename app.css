@@ -126,11 +126,10 @@ border-right: 1px solid #c1c1c1;
     flex-grow: 1;
 }
 
-.chat .messages {
+/* .chat .messages {
     flex-grow: 1;
-    background-image: url('./assets/mine.jpg');
-    background-size: cover;
-}
+   
+} */
 
 /* CONTACTS */
 .contact-details {
@@ -215,7 +214,12 @@ border-right: 1px solid #c1c1c1;
     flex-direction: column;
     gap: 12px;
 }
-
+.messages-container{
+    flex-grow: 1;
+    background-image: url('./assets/mine.jpg');
+    background-size: contain;
+    overflow-y: scroll;
+}
 .message {
     font-size: 16px;
     border-radius: 5px;

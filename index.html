@@ -115,18 +115,20 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-
-            <div class="messages" v-for="message in contacts[currentIndex].messages">
-                
-                <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
-                    {{message.message}}
-                 
+            <div class="messages-container">
+                <div class="messages" v-for="message in contacts[currentIndex].messages">
+    
+                    <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
+                        {{message.message}}
+                     
+                    </div>
+    
+                   
+                    <!-- <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
+                        {{message.message}}
+                    </div> -->
+    
                 </div>
-
-               
-                <!-- <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
-                    {{message.message}}
-                </div> -->
 
             </div>
 
@@ -134,7 +136,12 @@
                 <div class="emoji_chat">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
-                <input class="input_area_text" type="text" placeholder="scrivi qui il messaggio...">
+                <input  
+                v-model ="newMessage"
+                @keyup.enter ="addMessage(newMessage, currentIndex)"
+                class="input_area_text" 
+                type="text" 
+                placeholder="scrivi un messaggio">
                 <div class="rec_chat">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
