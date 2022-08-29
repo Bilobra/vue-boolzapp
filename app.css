@@ -94,6 +94,10 @@ body {
 /* sidebar */
 .sidebar {
     flex-basis: 380px;
+    
+}
+.sidebar .toolbar{
+border-right: 1px solid #c1c1c1;
 }
 
 .sidebar .contacts {
@@ -149,7 +153,7 @@ body {
 }
 
 .contact-name {
-    font: 400;
+    font-weight: 400;
     font-size: 18px;
     color: rgb(68, 65, 65)
 }
@@ -159,7 +163,7 @@ body {
     color: #CBD2DE;
 }
 .last-access{
-    color: #CBD2DE;
+    color: #c1c1c1;
     font-size: 16px;
 }
 
