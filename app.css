@@ -23,15 +23,15 @@ a {
 }
 
 i {
-    color: gray;
+    color: #B1B1B1;
 }
 
 /* body */
 body {
     height: 100vh;
     /* background-color: rgb(231, 222, 222);  */
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 82%, rgba(64, 153, 140, 1) 82%);
+    background: rgb(217, 219, 213);
+    background: linear-gradient(0deg, rgba(217, 219, 213, 1) 82%, rgba(0, 150, 136, 1) 82%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@ body {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    height: 90%;
+    height: 85%;
     background-color: white;
     display: flex;
 }
@@ -61,12 +61,13 @@ body {
     gap: 20px;
     padding: 15px 18px;
     align-items: center;
-    background-color: rgb(177, 233, 214);
+    background-color: #8EDAFC;
 }
 
 .notification_alert i {
     font-size: 25px;
-    color: rgb(177, 233, 214);
+    color: #8EDAFC;
+
 }
 
 .icon_notification {
@@ -86,6 +87,7 @@ body {
 .active_notification {
     font-size: 13;
     font-weight: 400;
+    color: #4d4e4f;
 }
 
 
@@ -100,13 +102,19 @@ body {
 
 /* toolbars */
 .toolbar {
-    background-color: #e2dada91;
-    padding: 5px 8px;
+    background-color: #EAEAEA;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     gap: 10px;
     /* width: 100%; */
 
+}
+
+.toolbar h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(65, 63, 63);
 }
 
 /* chat */
@@ -130,9 +138,9 @@ body {
 
 }
 
-/* .contacts{
+.contacts{
     overflow-y: scroll;
-} */
+}
 
 .contact {
     display: flex;
@@ -140,8 +148,19 @@ body {
     border-top: 1px solid #dedede;
 }
 
+.contact-name {
+    font: 400;
+    font-size: 18px;
+    color: rgb(68, 65, 65)
+}
+
 .contact-access-info {
     font-size: 12px;
+    color: #CBD2DE;
+}
+.last-access{
+    color: #CBD2DE;
+    font-size: 16px;
 }
 
 
@@ -156,13 +175,13 @@ body {
 /* contatto selezionato */
 .contact.active,
 .contact:hover {
-    background-color: #dedede;
+    background-color: #E9EBEB;
 }
 
 /* SEARCH */
 .search {
     padding: 10px 8px;
-    background-color: #eeeeee;
+    background-color: #F9F9F9;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -180,7 +199,7 @@ body {
     padding: 6px 16px;
     border-radius: 5px;
     background-color: white;
-    color: gray;
+    color: #B1B1B1;
     font-size: 20px;
 }
 
@@ -194,9 +213,9 @@ body {
 }
 
 .message {
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
     background-color: white;
 
 }
@@ -204,6 +223,7 @@ body {
 .message.sent {
     align-self: flex-end;
     background-color: #d5f9ba;
+
 }
 
 .message.received {
@@ -218,7 +238,7 @@ body {
     padding: 8px 16px;
     align-items: center;
     gap: 10px;
-    background-color: #eeeeee;
+    background-color: #F3EEEA;
 }
 
 .add-new-message input {

@@ -116,17 +116,18 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
 
-            <div class="messages">
-                <div class="message">
-                    ciao
+            <div class="messages" v-for="message in contacts[currentIndex].messages">
+                
+                <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
+                    {{message.message}}
+                 
                 </div>
 
-                <div class="message sent">
-                    ok
-                </div>
-                <div class="message received">
-                    ok
-                </div>
+               
+                <!-- <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
+                    {{message.message}}
+                </div> -->
+
             </div>
 
             <div class="add-new-message">
