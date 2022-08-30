@@ -176,10 +176,10 @@ const app = new Vue({
         userFinder: '',
         
     },
-    
+
     computed:{
         contactsFilter(){
-            return this.contacts.filter((el) => el.name === userFinder)
+            return this.contacts.filter((el) => el.name.toLowerCase().includes(this.userFinder.toLowerCase()))
         }
     },
 
