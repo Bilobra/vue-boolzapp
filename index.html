@@ -64,7 +64,7 @@
             </div>
 
             <ul class="contacts">
-                <li  @click="nextIndex(index)" v-for = "(contact,index) in contacts" class="contact" :class ="index === currentIndex ? 'active' : '' " >
+                <li  @click="setActivecontact(contact)" v-for = "contact in contacts" class="contact" :class ="contact === activeContact ? 'active' : '' " >
                     <div class="contact-details">
 
                         <figure class="avatar">
@@ -100,11 +100,11 @@
                 <div class="contact-details">
 
                     <figure class="avatar">
-                        <img :src="contacts[currentIndex].avatar" :alt="contacts[currentIndex].name">
+                        <img :src="activeContact.avatar" :alt="activeContact.name">
                     </figure>
 
                     <div class="contact-info">
-                        <h3 class="contact-name">{{contacts[currentIndex].name}}</h3>
+                        <h3 class="contact-name">{{activeContact.name}}</h3>
                         <p class="last-access">Ultimo accesso</p>
                     </div>
 
@@ -116,9 +116,9 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
             <div class="messages-container">
-                <div class="messages" v-for="message in contacts[currentIndex].messages">
+                <div class="messages" >
     
-                    <div class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
+                    <div v-for="message in activeContact.messages" class="message " :class="message.status === 'sent' ? 'sent' : 'received' ">
                         {{message.message}}
                      
                     </div>
@@ -138,7 +138,7 @@
                 </div>
                 <input  
                 v-model ="newMessage"
-                @keyup.enter ="addMessage(newMessage, currentIndex)"
+                @keyup.enter ="addMessage()"
                 class="input_area_text" 
                 type="text" 
                 placeholder="scrivi un messaggio">

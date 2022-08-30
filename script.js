@@ -168,40 +168,65 @@ const app = new Vue({
     data: {
         contacts,
         currentIndex: 0,
+        
+        activeContact: contacts[0],
+
         newMessage: '',
     },
 
     methods: {
-        nextIndex(index) {
-            this.currentIndex = index
+
+        // nextIndex(index) {
+        //     this.currentIndex = index
+        // },
+
+        // al posto dell'indice setto il contatto corrente 
+        setActivecontact(contact){
+        this.activeContact = contact
+
         },
 
-        addMessage(text, index) {
+        addMessage() {
 
-            newMessage = {
-                message: text,
+            // creo const per verificare con if e trim del mio messaggio input legato al v-model
+            const cleanedText = this.newMessage.trim()
+
+            if (cleanedText === '') return
+
+            // salvo in una variabile il this corrispondente al conttto corrente,
+            // così che il set interval venga applicato alla chat del contatto corrente
+            const messages = this.activeContact.messages
+
+            // creo const per salvare il mio obj creato con input
+            const message = {
+                date: '',
+                message: cleanedText,
                 status: 'sent',
             };
 
-            this.newMessage = this.newMessage.trim();
+            //    pusho nell'array
+            messages.push(message)
 
-            this.contacts[index].messages.push(newMessage);
+            // resetto il messaggio legato al v-model
+
             this.newMessage = '';
 
-
+            // creo obj utomatico e lo pusho nello stesso array
             setTimeout(() => {
-                this.autoMessage(index)
+                const message = {
+                    date: '',
+                    message: 'ok',
+                    status: 'received',
+                };
+                messages.push(message)
+
+
             }, 1000);
 
+
         },
 
-        autoMessage(index) {
-            newMessage = {
-                message: 'ok',
-                status: 'received'
-            };
-            this.contacts[index].messages.push(newMessage);
-        },
+
 
     },
 })
