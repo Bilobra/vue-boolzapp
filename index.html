@@ -60,7 +60,9 @@
                 </div>
                 
 
-                <input type="text" placeholder="cerca o inizia una nuova chat">
+                <input type="text" placeholder="cerca o inizia una nuova chat"
+                         v-model="userFinder" 
+                         @keyup.enter = "contactFilter()">
             </div>
 
             <ul class="contacts">

@@ -168,11 +168,22 @@ const app = new Vue({
     data: {
         contacts,
         currentIndex: 0,
-        
+
         activeContact: contacts[0],
 
         newMessage: '',
+
+        userFinder: '',
+        
     },
+    
+    computed:{
+        contactsFilter(){
+            return this.contacts.filter((el) => el.name === userFinder)
+        }
+    },
+
+
 
     methods: {
 
@@ -181,8 +192,8 @@ const app = new Vue({
         // },
 
         // al posto dell'indice setto il contatto corrente 
-        setActivecontact(contact){
-        this.activeContact = contact
+        setActivecontact(contact) {
+            this.activeContact = contact
 
         },
 
@@ -226,7 +237,19 @@ const app = new Vue({
 
         },
 
+        // filterContacts() {
+        //     this.filteredContacts = this.contacts.filter((el) => {
+        //         return el.name.toLowerCase().includes(this.userFinder.toLowerCase());
+        //     })
+        // },
+
+        // showVisible (){
+        //     this.activeContact.visible = !this.activeContact.visible
+        // }
+
 
 
     },
+
+    
 })
