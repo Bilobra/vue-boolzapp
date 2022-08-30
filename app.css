@@ -45,6 +45,9 @@ body {
     height: 95%;
     background-color: white;
     display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 8px 17px 0px rgb(68 65 65);
 }
 
 .chat,
@@ -147,7 +150,7 @@ border-right: 1px solid #c1c1c1;
 
 .contact {
     display: flex;
-    padding: 8px 5px 8px 12px;
+    padding: 8px 5px 8px 15px;
     border-top: 1px solid #dedede;
 }
 
@@ -173,6 +176,7 @@ border-right: 1px solid #c1c1c1;
     border-radius: 50%;
     /* aspect-ratio: 1/1; */
     overflow: hidden;
+    box-shadow: 0px 3px 7px 0px #4d4e4f;
 }
 
 /* contatto selezionato */
@@ -209,10 +213,10 @@ border-right: 1px solid #c1c1c1;
 /* messaggi */
 
 .messages {
-    padding: 20px 40px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
 }
 .messages-container{
     flex-grow: 1;
@@ -225,6 +229,7 @@ border-right: 1px solid #c1c1c1;
     border-radius: 5px;
     padding: 10px;
     background-color: white;
+    box-shadow: 2px 3px 3px 0px rgb(68 65 65);
 
 }
 
